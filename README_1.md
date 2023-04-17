@@ -14,9 +14,11 @@ speed up the training of certain machine learning models.
 ## Use Cases
 The HHL algorithm can be applied to a wide range of problems, such as:
 
-Optimization problems
-Machine learning
-Quantum simulation
+->Optimization problems
+
+->Machine learning
+
+->Quantum simulation
 
 ## Demonstration of the Implemented Algorithm
 
@@ -68,4 +70,16 @@ Return the solution x:
 return x
 
 ## Observations
+
+#### The interesting observations or insights that our team noticed while implementing the HHL Algorithm.
+
 During the implementation of the HHL algorithm, we observed that the performance of the algorithm depends heavily on the condition number of the input matrix A. In particular, if the condition number is very large, the algorithm may require a large number of qubits to achieve a reasonable accuracy. We also observed that the algorithm can be quite sensitive to noise and errors in the quantum hardware, which can lead to a significant degradation in performance. Overall, the HHL algorithm is a powerful tool for solving linear systems of equations, but its practical usefulness is currently limited by the constraints of quantum hardware.
+
+## Efficiency
+Time complexity: The HHL algorithm's main obstacle is matrix inversion with O(n^3) time complexity. Although the given code uses numpy.linalg.solve(), with O(n^2) time complexity, the algorithm's overall complexity remains O(n^3), which is polynomial but not optimal.
+
+Space complexity: The algorithm's space complexity hinges on the number of qubits used to represent the solution. While the numpy array approach incurs O(n) space complexity, constructing quantum circuits on M qubits could lead to O(2^M) space complexity.
+
+Numerical stability: The HHL algorithm may produce erroneous results for matrices with small or zero eigenvalues due to numerical instability, necessitating the use of additional methods to enhance its stability, which is not accounted for in the provided code.
+
+Hardware limitations: The HHL algorithm needs a quantum computer to execute the quantum circuits, but limited qubits in current quantum hardware may constrain the size of linear systems that can be solved, and errors in the hardware may affect the algorithm's precision and dependability.
