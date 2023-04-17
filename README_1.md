@@ -1,4 +1,4 @@
-Introduction to the HHL Algorithm and its Use Cases
+## Introduction to the HHL Algorithm
 
 The HHL algorithm is a quantum algorithm used to solve systems of linear
 equations, specifically of the form Ax = b. It was developed by Aram
@@ -11,7 +11,14 @@ machine learning, where linear systems often arise in the form of linear
 regression problems. The HHL algorithm could potentially be used to
 speed up the training of certain machine learning models.
 
-Demonstration of the Implemented Algorithm
+## Use Cases
+The HHL algorithm can be applied to a wide range of problems, such as:
+
+Optimization problems
+Machine learning
+Quantum simulation
+
+## Demonstration of the Implemented Algorithm
 
 Now, let\'s see the HHL algorithm in action. We have a linear system of
 equations with matrix A and right-hand side vector b:
@@ -59,3 +66,6 @@ np.real(psi_b\[:n\] @ psi_b\[:n\])
 Return the solution x:
 
 return x
+
+## Observations
+During the implementation of the HHL algorithm, we observed that the performance of the algorithm depends heavily on the condition number of the input matrix A. In particular, if the condition number is very large, the algorithm may require a large number of qubits to achieve a reasonable accuracy. We also observed that the algorithm can be quite sensitive to noise and errors in the quantum hardware, which can lead to a significant degradation in performance. Overall, the HHL algorithm is a powerful tool for solving linear systems of equations, but its practical usefulness is currently limited by the constraints of quantum hardware.
